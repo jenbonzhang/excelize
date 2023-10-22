@@ -159,7 +159,7 @@ type xlsxPageMargins struct {
 // specifies the sheet formatting properties.
 type xlsxSheetFormatPr struct {
 	XMLName          xml.Name `xml:"sheetFormatPr"`
-	BaseColWidth     uint8    `xml:"baseColWidth,attr,omitempty"`
+	BaseColWidth     uint     `xml:"baseColWidth,attr,omitempty"`
 	DefaultColWidth  float64  `xml:"defaultColWidth,attr,omitempty"`
 	DefaultRowHeight float64  `xml:"defaultRowHeight,attr"`
 	CustomHeight     bool     `xml:"customHeight,attr,omitempty"`
@@ -1056,7 +1056,7 @@ type SheetPropsOptions struct {
 	// width of the normal style's font. This value does not include margin
 	// padding or extra padding for grid lines. It is only the number of
 	// characters.
-	BaseColWidth *uint8
+	BaseColWidth *uint
 	// DefaultColWidth specifies the default column width measured as the
 	// number of characters of the maximum digit width of the normal style's
 	// font.

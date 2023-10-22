@@ -180,7 +180,7 @@ func (f *File) SetSheetProps(sheet string, opts *SheetPropsOptions) error {
 
 // GetSheetProps provides a function to get worksheet properties.
 func (f *File) GetSheetProps(sheet string) (SheetPropsOptions, error) {
-	baseColWidth := uint8(8)
+	baseColWidth := uint(8)
 	opts := SheetPropsOptions{
 		EnableFormatConditionsCalculation: boolPtr(true),
 		Published:                         boolPtr(true),
